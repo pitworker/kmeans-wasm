@@ -1,8 +1,6 @@
-# kmeans
-[![Current Crates.io Version](https://img.shields.io/crates/v/kmeans.svg)](https://crates.io/crates/kmeans)
-[![docs](https://docs.rs/kmeans/badge.svg)](https://docs.rs/kmeans/latest/kmeans/)
+# kmeans-wasm
 
-kmeans is a small and fast library for k-means clustering calculations.
+kmeans-wasm is adapted from [Markus Ebner's kmeans library](https://crates.io/crates/kmeans) to add wasm compatibility.
 Here is a small example, using kmean++ as initialization method and lloyd as k-means variant:
 
 ```rust
@@ -37,3 +35,7 @@ For performance-reasons, all calculations are done on bare vectors, using hand-w
 - KMean++
 - random partition
 - random sample
+
+## TODO
+- Swap all calls to std to no-std-compat
+- Swap rayon to wasm-bindgen-rayon

@@ -1,10 +1,10 @@
 [package]
-name = "kmeans"
+name = "kmeans-wasm"
 version = "0.2.0"
-authors = ["Markus Ebner <hiwatari.seiji@gmail.com>"]
-edition = "2018"
-description = "Small and fast library for k-means clustering calculations."
-repository = "https://github.com/seijikun/kmean-rs"
+authors = ["Markus Ebner <hiwatari.seiji@gmail.com>", "Swan Carpenter <swanio@duck.com>"]
+edition = "2022"
+description = "Small and fast wasm-compatible library for k-means clustering calculations."
+repository = "https://github.com/pitworker/kmeans-wasm"
 readme = "README.md"
 license = "Apache-2.0"
 keywords = ["kmeans", "k-means", "means", "cluster", "clustering"]
@@ -13,6 +13,7 @@ exclude = ["examples/*"]
 
 [dependencies]
 packed_simd = { version = "0.3.4", package = "packed_simd_2" }
+no-std-compat = { version = "0.4.1", features = [ "alloc", "compat_macros" ] }
 rayon = "1"
 rand = "0.7"
 num = "0.3"
